@@ -1,25 +1,297 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KWD-Zj-vM2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb5-EB-vPx">
+                                <rect key="frame" x="61" y="131" width="253" height="30"/>
+                                <state key="normal" title="AFHTTPRequestOperation">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lND-ke-rjb" kind="show" id="o4P-Rd-B4n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kF-Tf-SEI">
+                                <rect key="frame" x="56" y="184" width="253" height="30"/>
+                                <state key="normal" title="AFHTTPRequestOperationManager">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sj5-vi-81z" kind="show" id="DVC-pQ-ynF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkk-7L-nbh">
+                                <rect key="frame" x="56" y="237" width="253" height="30"/>
+                                <state key="normal" title="AFURLSessionManager">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qAp-7d-3DA" kind="show" id="zfK-BE-Kos"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQa-zb-HqX">
+                                <rect key="frame" x="61" y="338" width="253" height="30"/>
+                                <state key="normal" title="AFNetworkReachabilityManager">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nGP-vm-glJ" kind="show" id="jyY-gV-Ayx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bng-P1-UOX">
+                                <rect key="frame" x="56" y="284" width="253" height="30"/>
+                                <state key="normal" title="AFHTTPSessionManager">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="drw-EJ-YG7" kind="show" id="Hlp-dn-Q41"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zSP-yf-xPA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="691.5" y="190.5"/>
+        </scene>
+        <!--Session MgrVC-->
+        <scene sceneID="K63-On-rhA">
+            <objects>
+                <viewController id="drw-EJ-YG7" customClass="AFHTTPSessionMgrVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QbP-yQ-m6h"/>
+                        <viewControllerLayoutGuide type="bottom" id="tmZ-Fc-Yjh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bG5-pM-YnF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fl-Hw-CDP">
+                                <rect key="frame" x="64" y="145" width="198" height="33"/>
+                                <state key="normal" title="GET">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="get:" destination="sj5-vi-81z" eventType="touchUpInside" id="ZST-5x-Evy"/>
+                                    <action selector="get:" destination="drw-EJ-YG7" eventType="touchUpInside" id="y1h-Bn-P1O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqU-xW-XRv">
+                                <rect key="frame" x="68" y="275" width="198" height="33"/>
+                                <state key="normal" title="POST Form-Encoded">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="formEncoded:" destination="drw-EJ-YG7" eventType="touchUpInside" id="520-v1-6s9"/>
+                                    <action selector="postFormEncoded:" destination="sj5-vi-81z" eventType="touchUpInside" id="JxB-Df-bf1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGT-Us-FyK">
+                                <rect key="frame" x="61" y="398" width="198" height="33"/>
+                                <state key="normal" title="POST Multi-Part">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="multiPart:" destination="drw-EJ-YG7" eventType="touchUpInside" id="BPb-ux-JYZ"/>
+                                    <action selector="postMultiPart:" destination="sj5-vi-81z" eventType="touchUpInside" id="vp9-ch-BoT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l00-9B-72F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337.5" y="155.5"/>
+        </scene>
+        <!--Net State MonitorVC-->
+        <scene sceneID="DUB-dR-oYN">
+            <objects>
+                <viewController id="nGP-vm-glJ" customClass="AFNetStateMonitorVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5hf-6p-sLN"/>
+                        <viewControllerLayoutGuide type="bottom" id="axo-Jj-uyX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Grc-t3-qTF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmt-W8-zfh">
+                                <rect key="frame" x="143" y="124" width="88" height="32"/>
+                                <state key="normal" title="开始监听">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startMonitor:" destination="nGP-vm-glJ" eventType="touchUpInside" id="mxl-hO-yN4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ub1-KA-ruA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354.5" y="553.5"/>
+        </scene>
+        <!--Req Op MgrVC-->
+        <scene sceneID="W6O-Yn-bUP">
+            <objects>
+                <viewController id="sj5-vi-81z" customClass="AFHTTPReqOpMgrVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eGj-gF-1W0"/>
+                        <viewControllerLayoutGuide type="bottom" id="y5k-Hu-l5M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Xb-kY-kAm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu6-m4-U6Y">
+                                <rect key="frame" x="88" y="132" width="198" height="33"/>
+                                <state key="normal" title="GET">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="get:" destination="sj5-vi-81z" eventType="touchUpInside" id="dvG-Yw-2vj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfd-dX-rYZ">
+                                <rect key="frame" x="80" y="265" width="198" height="33"/>
+                                <state key="normal" title="POST Form-Encoded">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postFormEncoded:" destination="sj5-vi-81z" eventType="touchUpInside" id="c9i-Pg-J7o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4J-hk-sBW">
+                                <rect key="frame" x="82" y="363" width="198" height="33"/>
+                                <state key="normal" title="POST Multi-Part">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postMultiPart:" destination="sj5-vi-81z" eventType="touchUpInside" id="vB0-8f-lMT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1d-ZC-Qwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284.5" y="-404.5"/>
+        </scene>
+        <!--Session MgrVC-->
+        <scene sceneID="hPn-7P-Ibn">
+            <objects>
+                <viewController id="qAp-7d-3DA" customClass="AFURLSessionMgrVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hGZ-9e-YzB"/>
+                        <viewControllerLayoutGuide type="bottom" id="v4Z-iU-bY4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4ds-Lp-QZb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcK-wI-rz0">
+                                <rect key="frame" x="164" y="389" width="60" height="30"/>
+                                <state key="normal" title="上传图片">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="upLoad:" destination="qAp-7d-3DA" eventType="touchUpInside" id="Muf-Kg-NPU"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="URJ-81-YVb">
+                                <rect key="frame" x="112" y="220" width="150" height="2"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KCH-hX-0VK">
+                                <rect key="frame" x="112" y="509" width="150" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZn-Nx-eIl">
+                                <rect key="frame" x="164" y="119" width="60" height="30"/>
+                                <state key="normal" title="下载图片">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downLoad:" destination="qAp-7d-3DA" eventType="touchUpInside" id="Fn2-hZ-x7g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="download" destination="URJ-81-YVb" id="OPZ-gd-RJY"/>
+                        <outlet property="upLoadProgress" destination="KCH-hX-0VK" id="1Um-fr-Rpc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udr-Pj-NlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309.5" y="-184.5"/>
+        </scene>
+        <!--Req OpVC-->
+        <scene sceneID="vGN-R2-wot">
+            <objects>
+                <viewController id="lND-ke-rjb" customClass="AFHTTPReqOpVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ncN-bd-XOv"/>
+                        <viewControllerLayoutGuide type="bottom" id="JAb-7Q-R1F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QoH-2z-W7K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-eF-1kc">
+                                <rect key="frame" x="119" y="212" width="122" height="54"/>
+                                <state key="normal" title="GET">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="get:" destination="lND-ke-rjb" eventType="touchUpInside" id="Ebz-fv-E4i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMd-9e-rKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326.5" y="-660.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EzB-fo-3kn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KWD-Zj-vM2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dCt-dV-b9D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="gSM-lr-3g2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YyC-5m-NFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="1123"/>
         </scene>
     </scenes>
 </document>
